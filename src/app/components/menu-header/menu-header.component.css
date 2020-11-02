@@ -1,0 +1,23 @@
+#menu-header {
+  margin: 20px auto;
+  width: 70%;
+}
+nav {
+  background-color: transparent;
+  box-shadow: unset;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul a {
+  color: #777;
+}
+
+nav ul a:hover {
+  background-color: transparent;
+  color: #333;
+  border-bottom: #53585F 3px solid;
+}

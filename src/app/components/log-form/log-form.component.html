@@ -1,0 +1,40 @@
+<div id="container">
+  <div class="row">
+    <form [formGroup]="formFields" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="logDate" type="text" id="date-time" placeholder="yyyy-MM-dd HH:mm:ss.SSSS" class="active" />
+          <label for="date-time">Log Time</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="ipAddress" type="text" id="ip-address" placeholder="000.000.000.000" />
+          <label for="ip-address">IP Address</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input formControlName="request" type="text" id="request" />
+          <label for="request">Request</label>
+        </div>
+        <div class="input-field col s6">
+          <input formControlName="logStatus" type="number" id="status" />
+          <label for="status">Request Status</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea formControlName="userAgent" id="user-agent" class="materialize-textarea" data-length="100"></textarea>
+          <label for="user-agent">User Agent</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 btn-container" (click)="onSubmit()">
+          <a class="waves-effect waves-light btn-large">SAVE</a>
+        </div>
+        <div class="col s6 btn-container" (click)="onReset()">
+          <a class="waves-effect waves-light btn-large">CANCEL</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
