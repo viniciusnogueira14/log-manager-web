@@ -32,31 +32,24 @@ export class LogEntryService {
 
   public getByFilter(filter: Filter, pageNumber?: number, pageSize?: number): Observable<SliceResponse> {
     let parameters = new HttpParams();
-    console.log(filter);
     if (filter) {
       if (filter.ipAddress) {
-        console.log('IP_ADRESS');
         parameters = parameters.set('ipAddress', filter.ipAddress);
       }
       if (filter.logDate) {
-        console.log('LOG_DATE');
         parameters = parameters.set('logDate', filter.logDate);
       }
       if (filter.datePeriod) {
-        console.log('DATE_PERIOD');
         parameters = parameters.set('datePeriod', filter.datePeriod);
       }
       if (filter.userAgent) {
-        console.log('USER_AGENT');
         parameters = parameters.set('userAgent', filter.userAgent);
       }
     }
     if (pageNumber) {
-      console.log('PAGE');
       parameters = parameters.set('page', pageNumber.toString());
     }
     if (pageSize) {
-      console.log('SIZE');
       parameters = parameters.set('size', pageSize.toString());
     }
 

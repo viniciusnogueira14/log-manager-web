@@ -90,16 +90,11 @@ export class SearchPageComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log('TESTE');
-    console.log(this.searchFields);
-
     this.filter = new Filter(this.searchFields.value);
     this.logEntryService.getByFilter(this.filter).subscribe(
       (response: any) => {
         this.searchResponse = new SliceResponse(response);
         this.logEntries = this.searchResponse.content;
-
-        console.log(this.searchResponse);
       }
     );
 
