@@ -1,1 +1,72 @@
-<p>search-page works!</p>
+<div class="container">
+  <div id="search-panel" class="row">
+    <form [formGroup]="searchFields" class="col s12">
+      <div class="row">
+        <div class="input-field col s3">
+          <input formControlName="ipAddress" type="text" id="ip-address" placeholder="000.000.000.000" />
+          <label for="ip-address">IP Address</label>
+        </div>
+        <div class="input-field col s3">
+          <input formControlName="logDate" type="text" id="date-time" placeholder="yyyy-MM-dd HH:mm:ss.SSSS" class="active" />
+          <label for="date-time">Log Time</label>
+        </div>
+        <div class="col s6 valign-wrapper date-radio">
+          <span>
+            <label>
+              <input formControlName="datePeriod" class="with-gap" value="equals" type="radio" selected />
+              <span>Equals this date</span>
+            </label>
+          </span>
+          <span>
+            <label>
+              <input formControlName="datePeriod" class="with-gap" value="before" type="radio"  />
+              <span>Before this date</span>
+            </label>
+          </span>
+          <span>
+            <label>
+              <input formControlName="datePeriod" class="with-gap" value="after" type="radio"  />
+              <span>After this date</span>
+            </label>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea formControlName="userAgent" id="user-agent" class="materialize-textarea" data-length="1000"></textarea>
+          <label for="user-agent">User Agent</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 btn-container" (click)="onSubmit()">
+          <a class="waves-effect waves-light btn-large">SEARCH</a>
+        </div>
+        <div class="col s6 btn-container" (click)="onReset()">
+          <a class="waves-effect waves-light btn-large">RESET</a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="result-panel" class="row">
+    <table class="highlight">
+      <thead>
+        <tr>
+          <th class="col-time center-align">Log Time</th>
+          <th class="col-ip center-align">IP Address</th>
+          <th class="col-request center-align">Request</th>
+          <th class="col-status center-align">Status</th>
+          <th class="col-agent center-align">User Agent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let log of logEntries">
+          <td class="col-time">{{ log.logDate }}</td>
+          <td class="col-ip">{{ log.ipAddress }}</td>
+          <td class="col-request">{{ log.request }}</td>
+          <td class="col-status">{{ log.logStatus }}</td>
+          <td class="col-agent">{{ log.userAgent }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

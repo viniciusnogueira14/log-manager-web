@@ -16,4 +16,14 @@ export class LogEntry {
     this.userAgent = obj && obj.userAgent || null;
   }
 
+  static getList(obj: any): LogEntry[] {
+    const logs = new Array<LogEntry>();
+
+    for (const log of obj) {
+      logs.push(new LogEntry(log));
+    }
+
+    return logs;
+  }
+
 }

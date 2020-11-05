@@ -1,0 +1,42 @@
+.container {
+  width: 70%;
+  margin: 20px auto;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.btn-container a {
+  width: 50%;
+  background-color: #53585F;
+  border-radius: 6px;
+}
+
+.date-radio {
+  justify-content: space-between;
+  border: 1px solid #53585F;
+  height: 54px;
+  border-radius: 10px;
+  top: -10px;
+}
+
+.col-time {
+ min-width: 200px;
+}
+
+.col-ip {
+  min-width: 125px;
+}
+
+.col-request {
+  min-width: 105px;
+}
+
+.col-status {
+  min-width: 60px;
+}
+
+.col-agent {
+  min-width: 790px;
+}

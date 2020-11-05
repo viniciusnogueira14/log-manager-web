@@ -28,5 +28,20 @@
 }
 
 .response-text {
-  width: 100%;
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.response-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.response-content {
+  justify-content: center;
+  color: #53585F;
+}
+
+.response-icon {
+  font-size: 34px;
 }
