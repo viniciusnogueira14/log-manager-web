@@ -14,3 +14,19 @@
 .file-name {
   line-height: 64px;
 }
+
+.btn-container {
+  text-align: center;
+  height: 84px;
+  line-height: 84px;
+}
+
+.btn-container a {
+  width: 50%;
+  background-color: #53585F;
+  border-radius: 6px;
+}
+
+.response-text {
+  width: 100%;
+}

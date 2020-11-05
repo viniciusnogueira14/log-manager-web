@@ -1,7 +1,7 @@
 export class LogEntry {
 
   public code: number;
-  public logDate: Date;
+  public logDate: string;
   public ipAddress: string;
   public request: string;
   public logStatus: number;
@@ -9,7 +9,7 @@ export class LogEntry {
 
   constructor(obj?: any) {
     this.code = obj && obj.code || null;
-    this.logDate = obj && new Date(obj.logDate) || null;
+    this.logDate = obj && obj.logDate || null;
     this.ipAddress = obj && obj.ipAddress || null;
     this.request = obj && obj.request || null;
     this.logStatus = obj && obj.logStatus || null;

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col s12">
+    <div class="col s9">
       <div class="file-field input-field">
         <div class="btn waves-effect waves-light">
           <span>Select File</span>
@@ -10,6 +10,16 @@
           <input class="file-path validate" type="text">
         </div>
       </div>
+    </div>
+    <div class="col s3">
+      <div class="col s12 btn-container" (click)="onSendFile()">
+        <a class="waves-effect waves-light btn-large">SEND</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <span class="response-text">{{ responseText }}</span>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LogEntry } from 'src/app/models/log-entry.model';
 
@@ -11,6 +11,8 @@ declare const M: any;
   styleUrls: ['./log-form.component.css']
 })
 export class LogFormComponent implements OnInit {
+
+  @Output() submitClick = new EventEmitter<LogEntry>();
 
   formFields: FormGroup;
   logEntry: LogEntry = new LogEntry();
@@ -43,9 +45,7 @@ export class LogFormComponent implements OnInit {
     }
 
     this.logEntry = new LogEntry(this.formFields.value);
-
-    console.log(this.logEntry);
-    console.log(JSON.stringify(this.formFields.value));
+    this.submitClick.emit(this.logEntry);
   }
 
   onReset(): void {
