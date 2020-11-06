@@ -21,3 +21,9 @@ nav ul a:hover {
   color: #333;
   border-bottom: #53585F 3px solid;
 }
+
+.active {
+  background-color: transparent;
+  color: #333;
+  border-bottom: #53585F 3px solid;
+}

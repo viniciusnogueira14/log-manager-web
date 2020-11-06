@@ -18,4 +18,8 @@ export class MenuHeaderComponent implements OnInit {
     });
   }
 
+  setActive(element: any): void {
+    console.log(element);
+  }
+
 }

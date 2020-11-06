@@ -47,7 +47,7 @@
       </div>
     </form>
   </div>
-  <div id="result-panel" class="row">
+  <div *ngIf="logEntries.length > 0" id="result-panel" class="row">
     <table class="highlight">
       <thead>
         <tr>
